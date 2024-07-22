@@ -20,6 +20,7 @@ input {
   font-family: "Roboto", serif;
   border-radius: 4px;
   border-style: none;
+  font-size: 0.85rem;
 }
 
 label {
@@ -59,23 +60,31 @@ p {
   color: #fff;
   margin-left: -0.65em;
   cursor: pointer;
+  font-size: 0.85rem;
 }
 
 .metric-container {
   display: flex;
+  justify-content: space-between;
   width: 100%;
+  padding: 2rem;
   border: 2px solid black;
 }
 
 .metric-sub-container {
   display: flex;
   background-color: #e2dfdf;
-  padding: 0.75rem 4rem;
+  width: 30%;
+  padding: 1.25rem;
   border-radius: 8px;
 }
 
 .icon {
-  padding: 0.85rem 1rem;
+  padding: 1.25rem;
   border-radius: 8px;
   background-color: #b13acf;
+}
+
+.text-container {
+  margin-left: 0.55em;
 }
