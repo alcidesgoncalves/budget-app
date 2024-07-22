@@ -3,11 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Budget App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>hello</h1>
+    <div class="container">
+      <h1 class="main-title">Budget App</h1>
+      <div class="form-container">
+        <form action="submit">
+          <label for="budget">Your Budget : </label>
+          <input type="number" min="0" placeholder="Enter Your Budget!" />
+          <input class="btn-action" type="button" value="Calculate" />
+          <label for="">Expenses Details :</label>
+          <input type="text" placeholder="Enter your Expenses Desc!" />
+          <input type="number" min="0" placeholder="Expenses amount!" />
+          <input class="btn-action" type="button" value="Add Expenses" />
+        </form>
+      </div>
+
+      <section class="metric-container">
+        <div class="metric-sub-container">
+          <div class="icon"></div>
+          <div class="text-container">
+            <p>$100</p>
+            <p>Budget</p>
+          </div>
+        </div>
+        <div class="metric-sub-container">
+          <div class="icon"></div>
+          <div class="text-container">
+            <p>$0</p>
+            <p>Expenses</p>
+          </div>
+        </div>
+        <div class="metric-sub-container">
+          <div class="icon"></div>
+          <div class="text-container">
+            <p>$100</p>
+            <p>Balance</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <h2 class="footer-title">Budget Details</h2>
+        <div class="expense-generator">
+          <p></p>
+        </div>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
