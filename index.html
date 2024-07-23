@@ -10,10 +10,20 @@
     <div class="container">
       <h1 class="main-title">Budget App</h1>
       <div class="form-container">
-        <form action="submit">
+        <form>
           <label for="budget">Your Budget : </label>
-          <input type="number" min="0" placeholder="Enter Your Budget!" />
-          <input class="btn-action" type="button" value="Calculate" />
+          <input
+            id="budget-value"
+            type="number"
+            min="0"
+            placeholder="Enter Your Budget!"
+          />
+          <input
+            class="btn-action"
+            id="btn-calc"
+            type="button"
+            value="Calculate"
+          />
           <label for="">Expenses Details :</label>
           <input type="text" placeholder="Enter your Expenses Desc!" />
           <input type="number" min="0" placeholder="Expenses amount!" />
@@ -25,21 +35,21 @@
         <div class="metric-sub-container">
           <div class="icon"></div>
           <div class="text-container">
-            <p>$100</p>
+            <p class="text-value" id="budget-metric">$100</p>
             <p>Budget</p>
           </div>
         </div>
         <div class="metric-sub-container">
           <div class="icon"></div>
           <div class="text-container">
-            <p>$0</p>
+            <p class="text-value">$0</p>
             <p>Expenses</p>
           </div>
         </div>
         <div class="metric-sub-container">
           <div class="icon"></div>
           <div class="text-container">
-            <p>$100</p>
+            <p class="text-value">$100</p>
             <p>Balance</p>
           </div>
         </div>
@@ -48,7 +58,7 @@
       <footer class="footer">
         <h2 class="footer-title">Budget Details</h2>
         <div class="expense-generator">
-          <p></p>
+          <ul id="expense-list"></ul>
         </div>
       </footer>
     </div>
