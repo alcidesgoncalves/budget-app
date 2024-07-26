@@ -12,12 +12,24 @@ budgetBtn.addEventListener("click", function () {
 expenseBtn.addEventListener("click", function () {
   const expenseList = document.getElementById("expense-list");
   const expenseItem = document.createElement("li");
-  expenseItem.className = "item";
 
+  const editBtn = document.createElement("button");
+  editBtn.textContent = "Edit";
+  editBtn.className = "btn btn-edit";
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.className = "btn btn-delete";
+
+  expenseItem.className = "item";
   expenseItem.innerHTML = `
     <span>Desc: </span> ${descInput.value} 
     <span>Amount: </span> ${"$" + amountInput.value} 
   `;
+  expenseItem.appendChild(editBtn);
+  expenseItem.appendChild(deleteBtn);
 
   expenseList.appendChild(expenseItem);
+  descInput.value = "";
+  amountInput.value = "";
 });
